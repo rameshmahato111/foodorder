@@ -7,13 +7,13 @@ import { Provider } from "react-redux";
 import { store } from "./app/store";
 import {
   ContactComponent,
-  LoginComponent,
-  RegisterComponent,
   CartComponent,
   ProductDetailsComponent,
   ProductComponent,
 } from "./components/Components";
 import Graph from "./components/Dashboard/Graph";
+import UserProfilePage from "./components/UserProfile/UserProfile";
+import AuthComponent from "./components/Authentication/AuthComponent";
 
 const Routing = () => {
   return (
@@ -23,7 +23,6 @@ const Routing = () => {
           <Route path="/" element={<LayOut />}>
             <Route index element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
-            <Route path="/register" element={<RegisterComponent />} />
             <Route path="/contact" element={<ContactComponent />} />
             <Route path="/dessert" element={<ProductComponent />} />
             <Route
@@ -31,9 +30,11 @@ const Routing = () => {
               element={<ProductDetailsComponent />}
             />
             <Route path="/cart" element={<CartComponent />} />
-            <Route path="/login" element={<LoginComponent />} />
-            <Route path="/login" element={<LoginComponent />} />
+            <Route path="/login" element={<AuthComponent />} />
             <Route path="/dashboard" element={<Graph />} />
+            <Route path="/user-order" element={<UserProfilePage />} />
+
+
 
 
           </Route>

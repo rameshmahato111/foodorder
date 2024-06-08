@@ -8,6 +8,7 @@ const ButtonComponent = ({
   textColor,
   hover,
   onClick,
+  icons
  
 }) => {
   return (
@@ -25,7 +26,12 @@ const ButtonComponent = ({
         } 
         outline-none px-6 py-4 rounded-md capitalize font-poppins sm:text-md text-xs`}
       >
-        {title}
+         <div className="flex items-center justify-center gap-5">
+         {title}
+         {icons  }
+         </div>
+        
+        
       </button>
     </>
   );

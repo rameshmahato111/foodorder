@@ -10,13 +10,13 @@
 @layer components {
     .form-float{
         
-   @apply absolute left-5 -top-1 text-sm text-slate-400
+   @apply absolute left-5 -top-1 text-sm text-slate-200
     peer-placeholder-shown:text-base
-    peer-placeholder-shown:text-slate-600
+    peer-placeholder-shown:text-slate-400
     peer-placeholder-shown:top-3
-    peer-focus:text-slate-400
+    peer-focus:text-slate-300
     peer-focus:text-sm
-    peer-focus:-top-1
+    peer-focus:-top-0
     transition-all duration-300
     }
 

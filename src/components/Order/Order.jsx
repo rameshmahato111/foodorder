@@ -1,40 +1,44 @@
-import React, { useState, useEffect } from "react";
-import InputComponent from "../InputComponent";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import InputComponent from "../InputComponent"
+import { useNavigate } from "react-router-dom"
 
 const Order = () => {
   const [orderDetails, setOrderDetails] = useState({
-    username: "",
-    orderId: "",
+    fullName: "",
+    shipping: "",
+    productID: "",
+    shipping: "",
     quantity: 0,
     price: 0,
-  });
-  const [isLoggedin, setIsLoggedin] = useState(false);
-  const navigate = useNavigate();
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user) {
-      setIsLoggedin(true);
-    } else {
-      navigate("/login");
-    }
-  }, [navigate]);
+  })
+  //  this checks if the user is logged in and any session store in local store 
+  
+  // const [isLoggedin, setIsLoggedin] = useState(false)
+  // const navigate = useNavigate()
+  // useEffect(() => {
+  //   const user = JSON.parse(localStorage.getItem('user'))
+  //   if (user) {
+  //     setIsLoggedin(true)
+  //   } else {
+  //     navigate('/login')
+  //   }
+  // }, [navigate])
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(orderDetails);
-  };
+    e.preventDefault()
+    console.log(orderDetails)
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setOrderDetails((prevDetails) => ({
       ...prevDetails,
       [name]: value,
-    }));
-  };
-  if (!isLoggedin) {
-    return null;
+    }))
   }
+  // if (!isLoggedin) {
+  //   return null
+  // }
 
   return (
     <>
@@ -43,24 +47,39 @@ const Order = () => {
         <form onSubmit={(e) => handleSubmit(e)}>
           <InputComponent
             data={{
-              type: "email",
-              placeholder: "User Id",
-              label: "User Id",
-              name: "username",
-              id: "username",
-              htmlFor: "username",
+              type: "text",
+              placeholder: "Full Name",
+              label: "Full Name",
+              name: "fullName",
+              id: "fullName",
+              htmlFor: "fullName",
             }}
-            value={orderDetails.username}
+            value={orderDetails.fullName}
             onChange={handleChange}
           />
+
+<InputComponent
+            data={{
+              type: "text",
+              placeholder: "Shipping Address",
+              label: "Shipping Address",
+              name: "shipping",
+              id: "shipping",
+              htmlFor: "shipping",
+            }}
+            value={orderDetails.fullName}
+            onChange={handleChange}
+          />
+
+
           <InputComponent
             data={{
               type: "text",
-              placeholder: "Order ID",
-              label: "Order ID",
-              name: "orderId",
-              id: "orderId",
-              htmlFor: "orderId",
+              placeholder: "Product ID",
+              label: "Product ID",
+              name: "productID",
+              id: "productID",
+              htmlFor: "productID",
             }}
             value={orderDetails.orderId}
             onChange={handleChange}
@@ -98,7 +117,7 @@ const Order = () => {
         </form>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Order;
+export default Order

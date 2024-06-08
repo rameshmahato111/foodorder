@@ -1,11 +1,13 @@
 # Getting Started with Create React App
+install git repository from my git profile
+run command:
+git clone https://github.com/rameshmahato111/foodorder.git
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+ # To install all the package.json
+ run command:
+ npm install or npm i
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,57 +16,71 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact Component, Login Component, Register Component
+ 1.used formData api or hook to get data from the contact form. and useState() is not required.
+ 2. used react querty to connect with server api.
+ 
+ # To fetch data from the server
+ react query is used.
+ 1. to install react query run command: npm i react-query
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ # react icons for the icons
+  install runs the command: npm install react-icons --save 
 
-### `npm run eject`
+  # redux and redux toolkit 
+  1. to manage the complex state management 
+   install run command:  npm install @reduxjs/toolkit
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# react-router-dom
+there no built in router in react so use react-router-dom
+install run command npm i react-router-dom or npm install react-router-dom
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# react-helment
+to manage the meta data 
+install run commnad npm i react-helmet
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# react-toastify
+to show the pop up notification to the user
+install run command: npm i react-toastify
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# rechart js
+for vizualization
+install run command : npm install recharts
+# yup and formik
+client side validation
+install run command: npm i yup, npm i formik or use npm i yup formik
 
-## Learn More
+# axios
+use to make http request from browser
+install run command npm i axios
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# prettier 
+to format the codes user prettier
+install run command npm i prettier
+# create .prettierrc file to the manin directory
+# .prettierignore for the gitignore
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Login Component and Login button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. when user is logged in, redirect to user profile and order page
+2. user can edit and cancel the order 
+3. to mock up link is used redirecting to the user profile page
+4. Later can make api request and redirect accordingly.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Product detail page
 
-### Making a Progressive Web App
+1. order now button when click, it check if the user is logged in or not
+2. if logged in order modal pop up and can make order accordingly
+3. if the user is not logged in it redirect to the login page.
+4. for now checking login is commented can uncommnet and check the functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Menu navbar bar display all the products for now
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. react query is used to fetch data
+2. click each product to  view product details and make order.
