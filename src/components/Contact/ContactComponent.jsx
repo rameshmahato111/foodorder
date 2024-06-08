@@ -46,23 +46,24 @@ const ContactComponent = () => {
         <div className="max-w-[600px] md:max-h-[600px] mx-auto px-2 rounded-lg">
           <div>
             <form onSubmit={onSubmit}>
-              <div className="sm:pl-10 py-20">
+              <div className=" py-10 drop-shadow-lg bg-gray-500 rounded-lg px-2">
                 <h3 className="text-4xl font-poppins text-white">Get In Touch</h3>
-                <p className="font-poppins my-3 text-white">
+                <p className="font-poppins text-white py-2">
                   Let's have a opportunity to serve in a better way.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-2 p-2">
+                <div className="grid md:grid-cols-2 gap-2">
                   {InputFields.map((inputs) => (
                     <InputComponent data={inputs} key={inputs.name} />
                   ))}
                 </div>
-
+                <div className="">
                 <ButtonComponent
                   title={"submit"}
                   backgroundColor={"bg-blue-400"}
                   btnSize={"w-full"}
                 />
+                </div>
               </div>
             </form>
           </div>

@@ -16,6 +16,10 @@ const NavItems = [
         title: 'login',
         link:'login'
     },
+    {
+        title: 'dashboard',
+        link:'dashboard'
+    },
 ]
   
 export default NavItems

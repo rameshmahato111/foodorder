@@ -11,8 +11,8 @@ const Order = () => {
     quantity: 0,
     price: 0,
   })
-  //  this checks if the user is logged in and any session store in local store 
-  
+  //  this checks if the user is logged in and any session store in local store
+
   // const [isLoggedin, setIsLoggedin] = useState(false)
   // const navigate = useNavigate()
   // useEffect(() => {
@@ -58,7 +58,7 @@ const Order = () => {
             onChange={handleChange}
           />
 
-<InputComponent
+          <InputComponent
             data={{
               type: "text",
               placeholder: "Shipping Address",
@@ -70,7 +70,6 @@ const Order = () => {
             value={orderDetails.fullName}
             onChange={handleChange}
           />
-
 
           <InputComponent
             data={{
