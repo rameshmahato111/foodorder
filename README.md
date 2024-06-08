@@ -84,3 +84,11 @@ install run command npm i prettier
 
 1. react query is used to fetch data
 2. click each product to  view product details and make order.
+
+# dashoboard 
+
+1. we can filter user id and order id
+2. fiter by status delivered, pending, cancelled
+
+3. rechart js is used to visualize the data 
+4
