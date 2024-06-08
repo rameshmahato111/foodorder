@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Poppins:wght@200&family=Sofia&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .form-float{
+        
+   @apply absolute left-5 -top-1 text-sm text-slate-400
+    peer-placeholder-shown:text-base
+    peer-placeholder-shown:text-slate-600
+    peer-placeholder-shown:top-3
+    peer-focus:text-slate-400
+    peer-focus:text-sm
+    peer-focus:-top-1
+    transition-all duration-300
+    }
+
+    .login-float{
+
+        @apply absolute left-10 -top-0 text-sm text-slate-400
+        peer-placeholder-shown:text-base
+        peer-placeholder-shown:text-slate-600
+        peer-placeholder-shown:top-4
+        peer-focus:text-slate-400
+        peer-focus:text-sm
+        peer-focus:-top-0
+        transition-all duration-300
+    }
+
+
+}

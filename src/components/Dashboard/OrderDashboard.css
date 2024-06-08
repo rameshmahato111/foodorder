@@ -1,0 +1,140 @@
+/* OrderDashboard.css */
+.order-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filter-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.filter-search select,
+.filter-search input {
+  padding: 5px;
+  font-size: 16px;
+  width: 600px;
+  border-radius: 5px;
+
+}
+
+.order-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-list th,
+.order-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.order-list th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.order-summary {
+  margin-top: 20px;
+}
+
+.order-summary .charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.order-summary .chart {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .filter-search {
+    flex-direction: column;
+  }
+
+  .filter-search select,
+  .filter-search input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .order-list th,
+  .order-list td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .order-summary .charts {
+    flex-direction: column;
+  }
+
+  .order-summary .chart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablets (min-width: 601px) and (max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .filter-search {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filter-search select,
+  .filter-search input {
+    width: 48%;
+    margin-bottom: 0;
+  }
+
+  .order-list th,
+  .order-list td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .order-summary .charts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-summary .chart {
+    width: 48%;
+  }
+}
+
+/* Large screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .filter-search {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .filter-search select,
+  .filter-search input {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .order-list th,
+  .order-list td {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .order-summary .charts {
+    flex-direction: row;
+  }
+
+  .order-summary .chart {
+    width: 45%;
+  }
+}
