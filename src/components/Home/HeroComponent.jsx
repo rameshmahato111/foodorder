@@ -23,8 +23,8 @@ const HeroComponent = () => {
                             of pleasure of the moment with a righteous hand.
                         </p>
                         <div className='flex items-center justify-center gap-3 my-5'>
-                            <ButtonComponent tittle={'get delivery'} />
-                            <ButtonComponent tittle={'explore more'} />
+                            <ButtonComponent title={'get delivery'} />
+                            <ButtonComponent title={'explore more'} />
 
                         </div>
                     </div>

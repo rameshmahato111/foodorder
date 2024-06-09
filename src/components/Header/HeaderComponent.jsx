@@ -1,21 +1,18 @@
-import React, { useState } from "react";
-import NavItems from "./NavItems";
-import { NavLink } from "react-router-dom";
-import {
-  MdOutlineRestaurantMenu,
-  MdOutlineRestaurant,
-} from "react-icons/md";
-import { useSelector } from "react-redux";
-import { BsCart4 } from "react-icons/bs";
+import React, { useState } from "react"
+import NavItems from "./NavItems"
+import { NavLink } from "react-router-dom"
+import { MdOutlineRestaurantMenu, MdOutlineRestaurant } from "react-icons/md"
+import { useSelector } from "react-redux"
+import { BsCart4 } from "react-icons/bs"
 
 const HeaderComponent = () => {
-  const items = useSelector((state) => state.cart);
-  const [nav, setNav] = useState(false);
+  const items = useSelector((state) => state.cart)
+  const [nav, setNav] = useState(false)
   // const uid = new Date().getTime()
 
   const handleNav = () => {
-    setNav(!nav);
-  };
+    setNav(!nav)
+  }
 
   return (
     <>
@@ -55,28 +52,33 @@ const HeaderComponent = () => {
         >
           {nav ? <MdOutlineRestaurantMenu /> : <MdOutlineRestaurant />}
         </button>
-        {/* mobile responsive */}
+      
 
-        <ul
-          className={
-            nav
-              ? `md:hidden fixed left-0 mt-[700px] items-center justify-center space-y-5 h-screen bg-black w-full text-white text-center translate-y-6 ease-in-out duration-500`
-              : "fixed left-[-100%]"
-          }
-        >
-          {NavItems.map((item) => {
-            return (
-              <>
-                <li className="capitalize font-navtitle hover:text-yellow text-lightBlack-0 transition-all duration-200" key={item.title}>
-                  <NavLink to={`/${item.link}`}>{item.title}</NavLink>
-                </li>
-              </>
-            );
-          })}
-        </ul>
       </div>
-    </>
-  );
-};
+    
+      <ul
+        className={`z-10 md:hidden block pl-2  bg-black text-white space-y-8 text-2xl font-poppins ${
+          nav
+            ? "fixed w-full h-screen transition-all ease-in-out duration-500 z-30"
+            : "fixed w-full h-screen -translate-x-[100%] transition-all duration-500"
+        }`}
+      >
+        {NavItems.map((item) => (
+          <li key={item.title} className="">
+            <NavLink
+              to={`${item.link}`}
+              onClick={handleNav}
+              className={`font-poppins md:text-2xl capitalize`}
+            >
+              {item.title}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
 
-export default HeaderComponent;
+
+    </>
+  )
+}
+
+export default HeaderComponent
